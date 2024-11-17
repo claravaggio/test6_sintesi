@@ -7,7 +7,7 @@ let greenRectX; // Posizione iniziale del rettangolo verde
 let greenRectY; // Posizione verticale del rettangolo verde
 let greenRectWidth = 20; // Larghezza del rettangolo verde
 let greenRectHeight = rectHeight;
-let greenSpeed = -1.5; // Velocità del rettangolo verde verso sinistra
+let greenSpeed = -0.7; // Velocità del rettangolo verde verso sinistra
 let greenRectVisible = false; // Flag per mostrare il rettangolo verde
 
 let containerX; // Posizione iniziale del contorno
@@ -89,6 +89,10 @@ function draw() {
     progress += 2;
 
     auto1X += map(counter, 0, 100, 0, 5);
+
+    // Nascondi il rettangolo verde se stai accelerando
+    greenRectVisible = false;
+    rectColor = 255; // Reimposta il colore a bianco
 
     if (rectX > containerX + containerWidth - rectWidth) {
       rectX = containerX + containerWidth - rectWidth;
