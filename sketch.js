@@ -74,7 +74,7 @@ function draw() {
     }
   }
 
-  fill(180);
+  fill(255);
   rect(containerX, containerY, containerWidth, containerHeight, roundedCorner);
 
   progress = constrain(progress, 0, width);
@@ -141,7 +141,7 @@ function draw() {
       rectColor = color(255, 0, 0); // Rosso se è fuori dal limite del rettangolo verde
     }
   } else {
-    rectColor = 255; // Bianco quando il rettangolo verde non è visibile
+    rectColor = 180; // Bianco quando il rettangolo verde non è visibile
   }
 
   if (
